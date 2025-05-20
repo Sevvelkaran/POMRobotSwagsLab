@@ -5,6 +5,7 @@ Resource            /Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /PO
 Resource            /Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/Resources/LoginResource.robot
 Library             DataDriver    file=/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/Resources/Logindata.csv    encoding=utf_8    dialect=unix
 Test Setup          Open the Browser with URL
+Test Teardown       Close Browser
 Test Template       Validate Login Scenarios
 
 *** Variables ***

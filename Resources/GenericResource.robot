@@ -8,4 +8,6 @@ Open the Browser with URL
     Maximize Browser Window
     Set Selenium Implicit Wait    5s
 
-
+Close the Browser
+    Close Browser
+    

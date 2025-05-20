@@ -1,94 +1,426 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-20T13:21:10.956469" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-20T15:07:44.296500" rpa="false" schemaversion="5">
 <suite id="s1" name="MenubarTest" source="/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/TestCases/MenubarTest.robot">
-<test id="s1-t1" name="Validate Menubar Scenarios" line="11">
+<test id="s1-t1" name="Validate Menubar With Standard User" line="11">
 <kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-20T13:21:11.540309" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
-<msg time="2025-05-20T13:21:15.326187" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+<msg time="2025-05-20T15:07:44.884801" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
 <arg>https://www.saucedemo.com</arg>
 <arg>firefox</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-20T13:21:11.540047" elapsed="10.352029"/>
+<status status="PASS" start="2025-05-20T15:07:44.884544" elapsed="8.571874"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-20T13:21:21.893079" elapsed="0.497540"/>
+<status status="PASS" start="2025-05-20T15:07:53.457519" elapsed="0.491937"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-05-20T13:21:22.390936" elapsed="0.003109"/>
+<status status="PASS" start="2025-05-20T15:07:53.949765" elapsed="0.003218"/>
 </kw>
-<status status="PASS" start="2025-05-20T13:21:11.539142" elapsed="10.855091"/>
+<status status="PASS" start="2025-05-20T15:07:44.883659" elapsed="9.069526"/>
 </kw>
-<kw name="Validate Menubar Scenarios">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-20T15:07:53.954057" level="INFO">${username} = standard_user</msg>
+<var>${username}</var>
+<arg>standard_user</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-20T15:07:53.953728" elapsed="0.000399"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-20T15:07:53.954611" level="INFO">${password} = secret_sauce</msg>
+<var>${password}</var>
+<arg>secret_sauce</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-20T15:07:53.954392" elapsed="0.000265"/>
+</kw>
 <kw name="Fill the Login form" owner="LoginResource">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T13:21:22.396598" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@placeholder="Username"]'.</msg>
+<msg time="2025-05-20T15:07:53.956299" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@placeholder="Username"]'.</msg>
 <arg>xpath://input[@placeholder="Username"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T13:21:22.396039" elapsed="0.218421"/>
+<status status="PASS" start="2025-05-20T15:07:53.955643" elapsed="0.169611"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T13:21:22.615023" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<msg time="2025-05-20T15:07:54.125792" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@placeholder="Password"]'.</msg>
 <arg>xpath://input[@placeholder="Password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T13:21:22.614689" elapsed="0.035318"/>
+<status status="PASS" start="2025-05-20T15:07:54.125476" elapsed="0.047067"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-20T13:21:22.650473" level="INFO">Clicking element 'xpath://input[@value="Login"]'.</msg>
+<msg time="2025-05-20T15:07:54.173000" level="INFO">Clicking element 'xpath://input[@value="Login"]'.</msg>
 <arg>xpath://input[@value="Login"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T13:21:22.650241" elapsed="0.360658"/>
+<status status="PASS" start="2025-05-20T15:07:54.172774" elapsed="0.338267"/>
 </kw>
 <arg>${username}</arg>
 <arg>${password}</arg>
-<status status="PASS" start="2025-05-20T13:21:22.395618" elapsed="0.615646"/>
+<status status="PASS" start="2025-05-20T15:07:53.955027" elapsed="0.556217"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T15:07:54.511785" elapsed="1.171189"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:07:44.882622" elapsed="10.800619"/>
+</test>
+<test id="s1-t2" name="Verify the All Item element functionality" line="17">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:07:55.685506" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>https://www.saucedemo.com</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-20T15:07:55.685201" elapsed="6.495639"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-20T15:08:02.182830" elapsed="0.523976"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-20T15:08:02.707044" elapsed="0.007724"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:07:55.684402" elapsed="7.030572"/>
+</kw>
+<kw name="Fill the Login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:02.717187" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@placeholder="Username"]'.</msg>
+<arg>xpath://input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:02.716657" elapsed="0.116982"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:02.834747" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>xpath://input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:02.834024" elapsed="0.041399"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:02.875891" level="INFO">Clicking element 'xpath://input[@value="Login"]'.</msg>
+<arg>xpath://input[@value="Login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:02.875650" elapsed="0.306595"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-20T15:08:02.715994" elapsed="0.466527"/>
 </kw>
 <kw name="Click an item and Click on the All Items" owner="MenubarResource">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-20T13:21:23.013137" level="INFO">Clicking element 'xpath://div[text()='Sauce Labs Backpack']'.</msg>
+<msg time="2025-05-20T15:08:03.183796" level="INFO">Clicking element 'xpath://div[text()='Sauce Labs Backpack']'.</msg>
 <arg>xpath://div[text()='Sauce Labs Backpack']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T13:21:23.012665" elapsed="0.240685"/>
+<status status="PASS" start="2025-05-20T15:08:03.183505" elapsed="0.227245"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-20T13:21:23.254364" level="INFO">Clicking element 'xpath://button[@id="react-burger-menu-btn"]'.</msg>
+<msg time="2025-05-20T15:08:03.411387" level="INFO">Clicking element 'xpath://button[@id="react-burger-menu-btn"]'.</msg>
 <arg>xpath://button[@id="react-burger-menu-btn"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T13:21:23.253727" elapsed="0.242112"/>
+<status status="PASS" start="2025-05-20T15:08:03.411075" elapsed="0.225496"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-20T13:21:23.496814" level="INFO">Clicking element 'xpath://a[@id="inventory_sidebar_link"]'.</msg>
+<msg time="2025-05-20T15:08:03.637350" level="INFO">Clicking element 'xpath://a[@id="inventory_sidebar_link"]'.</msg>
 <arg>xpath://a[@id="inventory_sidebar_link"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T13:21:23.496295" elapsed="0.266551"/>
+<status status="PASS" start="2025-05-20T15:08:03.636939" elapsed="0.235697"/>
 </kw>
-<status status="PASS" start="2025-05-20T13:21:23.011876" elapsed="0.751162"/>
+<status status="PASS" start="2025-05-20T15:08:03.182993" elapsed="0.689775"/>
+</kw>
+<kw name="Verify the the ALL Items have brought to the homepage" owner="MenubarResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:03.873809" level="INFO">Verifying element '//span[text()='Products']' contains exact text 'Products'.</msg>
+<arg>${Homepage_title_locator}</arg>
+<arg>Products</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-20T15:08:03.873538" elapsed="0.013896"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:03.873099" elapsed="0.014491"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T15:08:03.888171" elapsed="1.003150"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:07:55.683799" elapsed="9.208014"/>
+</test>
+<test id="s1-t3" name="Verify the About page functionality" line="23">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:04.895477" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>https://www.saucedemo.com</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-20T15:08:04.895022" elapsed="5.919095"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-20T15:08:10.814738" elapsed="0.492577"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-20T15:08:11.307666" elapsed="0.003645"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:04.894162" elapsed="6.417339"/>
+</kw>
+<kw name="Fill the Login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:11.313923" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@placeholder="Username"]'.</msg>
+<arg>xpath://input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:11.313344" elapsed="0.350920"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:11.664862" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>xpath://input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:11.664565" elapsed="0.048239"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:11.713290" level="INFO">Clicking element 'xpath://input[@value="Login"]'.</msg>
+<arg>xpath://input[@value="Login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:11.713044" elapsed="0.302074"/>
 </kw>
 <arg>${username}</arg>
 <arg>${password}</arg>
-<status status="PASS" start="2025-05-20T13:21:22.394803" elapsed="1.368379"/>
+<status status="PASS" start="2025-05-20T15:08:11.312359" elapsed="0.702938"/>
 </kw>
-<status status="PASS" start="2025-05-20T13:21:11.538130" elapsed="12.225397"/>
+<kw name="Click on the About in the menubar" owner="MenubarResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:12.017052" level="INFO">Clicking element 'xpath://button[@id="react-burger-menu-btn"]'.</msg>
+<arg>xpath://button[@id="react-burger-menu-btn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:12.016790" elapsed="0.223917"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:12.241736" level="INFO">Clicking element 'xpath://a[@id="about_sidebar_link"]'.</msg>
+<arg>xpath://a[@id="about_sidebar_link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:12.241244" elapsed="7.682309"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:12.015690" elapsed="7.908042"/>
+</kw>
+<kw name="Verify the About page" owner="MenubarResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:19.925150" level="INFO">Verifying element '//button[text()='Book a demo']' contains exact text 'Book a demo'.</msg>
+<arg>${About_demo}</arg>
+<arg>Book a demo</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-20T15:08:19.924813" elapsed="0.042933"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:19.924348" elapsed="0.043557"/>
+</kw>
+<kw name="Navigate Back to the Homepage and Verify" owner="MenubarResource">
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-20T15:08:19.969251" elapsed="0.644640"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:20.663604" level="INFO">Element '//span[text()='Products']' is displayed.</msg>
+<arg>${Homepage_title_locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-20T15:08:20.614155" elapsed="0.049586"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:20.664260" level="INFO">Verifying element '//span[text()='Products']' contains exact text 'Products'.</msg>
+<arg>${Homepage_title_locator}</arg>
+<arg>Products</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-20T15:08:20.663952" elapsed="0.015665"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:19.968349" elapsed="0.711432"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T15:08:20.680323" elapsed="1.243978"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:04.892977" elapsed="17.031523"/>
+</test>
+<test id="s1-t4" name="Verify the Logout functionality" line="30">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:21.926545" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>https://www.saucedemo.com</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-20T15:08:21.926338" elapsed="6.635791"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-20T15:08:28.563135" elapsed="0.473738"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-20T15:08:29.037525" elapsed="0.006434"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:21.925982" elapsed="7.118186"/>
+</kw>
+<kw name="Fill the Login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:29.046393" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@placeholder="Username"]'.</msg>
+<arg>xpath://input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:29.045780" elapsed="0.132326"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:29.178614" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>xpath://input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:29.178330" elapsed="0.039095"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:29.218351" level="INFO">Clicking element 'xpath://input[@value="Login"]'.</msg>
+<arg>xpath://input[@value="Login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:29.217793" elapsed="0.343016"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-20T15:08:29.044851" elapsed="0.516136"/>
+</kw>
+<kw name="Click on Logout in the Menubar" owner="MenubarResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:29.562073" level="INFO">Clicking element 'xpath://button[@id="react-burger-menu-btn"]'.</msg>
+<arg>xpath://button[@id="react-burger-menu-btn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:29.561804" elapsed="0.220927"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:29.783316" level="INFO">Clicking element 'xpath://a[@id="logout_sidebar_link"]'.</msg>
+<arg>xpath://a[@id="logout_sidebar_link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:29.783003" elapsed="0.232721"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:29.561380" elapsed="0.456585"/>
+</kw>
+<kw name="Verify the Logout is successful" owner="MenubarResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:30.019675" level="INFO">Verifying element '//h4[text()='Accepted usernames are:']' contains exact text 'Accepted usernames are:'.</msg>
+<arg>${logout}</arg>
+<arg>Accepted usernames are:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-20T15:08:30.019165" elapsed="0.017211"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:30.018507" elapsed="0.018015"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T15:08:30.036876" elapsed="0.981923"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:21.925430" elapsed="9.093661"/>
+</test>
+<test id="s1-t5" name="Verify the Reset App State functionality" line="36">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:31.022301" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>https://www.saucedemo.com</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-20T15:08:31.021953" elapsed="5.323478"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-20T15:08:36.346263" elapsed="0.506559"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-20T15:08:36.853165" elapsed="0.007773"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:31.021253" elapsed="5.840020"/>
+</kw>
+<kw name="Fill the Login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:36.863802" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@placeholder="Username"]'.</msg>
+<arg>xpath://input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:36.863190" elapsed="0.152330"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:37.016420" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>xpath://input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:37.015891" elapsed="0.042918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:37.059253" level="INFO">Clicking element 'xpath://input[@value="Login"]'.</msg>
+<arg>xpath://input[@value="Login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:37.059024" elapsed="0.303347"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-20T15:08:36.862082" elapsed="0.500475"/>
+</kw>
+<kw name="Click on the Reset App State in the Menubar" owner="MenubarResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:37.363769" level="INFO">Clicking element 'xpath://button[@name="add-to-cart-sauce-labs-backpack"]'.</msg>
+<arg>xpath://button[@name="add-to-cart-sauce-labs-backpack"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:37.363497" elapsed="0.218031"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:37.581963" level="INFO">Clicking element 'xpath://button[@id="react-burger-menu-btn"]'.</msg>
+<arg>xpath://button[@id="react-burger-menu-btn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:37.581741" elapsed="0.230125"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:37.813087" level="INFO">Verifying element '//span[text()='1']' contains exact text '1'.</msg>
+<arg>${reset}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-20T15:08:37.812399" elapsed="0.021953"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:37.835196" level="INFO">Clicking element 'xpath://a[@id="reset_sidebar_link"]'.</msg>
+<arg>xpath://a[@id="reset_sidebar_link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:08:37.834890" elapsed="0.231910"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:08:37.363054" elapsed="0.703897"/>
+</kw>
+<kw name="Verify the Reset App State is successful" owner="MenubarResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:08:38.069492" level="FAIL">Keyword 'SeleniumLibrary.Element Text Should Be' expected 2 to 4 arguments, got 1.</msg>
+<arg>${after_reset}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2025-05-20T15:08:38.068474" elapsed="0.001237">Keyword 'SeleniumLibrary.Element Text Should Be' expected 2 to 4 arguments, got 1.</status>
+</kw>
+<status status="FAIL" start="2025-05-20T15:08:38.067367" elapsed="0.002853">Keyword 'SeleniumLibrary.Element Text Should Be' expected 2 to 4 arguments, got 1.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T15:08:38.070774" elapsed="1.160728"/>
+</kw>
+<status status="FAIL" start="2025-05-20T15:08:31.019889" elapsed="8.211882">Keyword 'SeleniumLibrary.Element Text Should Be' expected 2 to 4 arguments, got 1.</status>
 </test>
 <doc>Menubar Test Case</doc>
-<status status="PASS" start="2025-05-20T13:21:10.958981" elapsed="12.805386"/>
+<status status="FAIL" start="2025-05-20T15:07:44.300592" elapsed="54.932908"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="MenubarTest" id="s1" pass="1" fail="0" skip="0">MenubarTest</stat>
+<stat name="MenubarTest" id="s1" pass="4" fail="1" skip="0">MenubarTest</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-20T13:21:15.326187" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
 </errors>
 </robot>
