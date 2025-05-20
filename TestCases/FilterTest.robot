@@ -9,7 +9,7 @@ Test Teardown    Close Browser
 
 
 *** Test Cases ***
-Validate Menubar With Standard User
+Validate Filter With Standard User
     ${username}=    Set Variable    standard_user
     ${password}=    Set Variable    secret_sauce
     LoginResource.Fill the Login form    ${username}    ${password}
