@@ -51,6 +51,7 @@ Click on the Reset App State in the Menubar
     Click Element    xpath://button[@id="react-burger-menu-btn"]
     Element Text Should Be    ${reset}    1
     Click Element    xpath://a[@id="reset_sidebar_link"]
+    Reload Page
 
 
 # Verify the Reset App State is successful
