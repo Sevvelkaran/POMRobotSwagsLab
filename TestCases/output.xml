@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-20T13:21:10.956469" rpa="false" schemaversion="5">
+<suite id="s1" name="MenubarTest" source="/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/TestCases/MenubarTest.robot">
+<test id="s1-t1" name="Validate Menubar Scenarios" line="11">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-20T13:21:11.540309" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2025-05-20T13:21:15.326187" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+<arg>https://www.saucedemo.com</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-20T13:21:11.540047" elapsed="10.352029"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-20T13:21:21.893079" elapsed="0.497540"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-20T13:21:22.390936" elapsed="0.003109"/>
+</kw>
+<status status="PASS" start="2025-05-20T13:21:11.539142" elapsed="10.855091"/>
+</kw>
+<kw name="Validate Menubar Scenarios">
+<kw name="Fill the Login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T13:21:22.396598" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@placeholder="Username"]'.</msg>
+<arg>xpath://input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T13:21:22.396039" elapsed="0.218421"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-20T13:21:22.615023" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>xpath://input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T13:21:22.614689" elapsed="0.035318"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T13:21:22.650473" level="INFO">Clicking element 'xpath://input[@value="Login"]'.</msg>
+<arg>xpath://input[@value="Login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T13:21:22.650241" elapsed="0.360658"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-20T13:21:22.395618" elapsed="0.615646"/>
+</kw>
+<kw name="Click an item and Click on the All Items" owner="MenubarResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T13:21:23.013137" level="INFO">Clicking element 'xpath://div[text()='Sauce Labs Backpack']'.</msg>
+<arg>xpath://div[text()='Sauce Labs Backpack']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T13:21:23.012665" elapsed="0.240685"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T13:21:23.254364" level="INFO">Clicking element 'xpath://button[@id="react-burger-menu-btn"]'.</msg>
+<arg>xpath://button[@id="react-burger-menu-btn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T13:21:23.253727" elapsed="0.242112"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T13:21:23.496814" level="INFO">Clicking element 'xpath://a[@id="inventory_sidebar_link"]'.</msg>
+<arg>xpath://a[@id="inventory_sidebar_link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T13:21:23.496295" elapsed="0.266551"/>
+</kw>
+<status status="PASS" start="2025-05-20T13:21:23.011876" elapsed="0.751162"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-20T13:21:22.394803" elapsed="1.368379"/>
+</kw>
+<status status="PASS" start="2025-05-20T13:21:11.538130" elapsed="12.225397"/>
+</test>
+<doc>Menubar Test Case</doc>
+<status status="PASS" start="2025-05-20T13:21:10.958981" elapsed="12.805386"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="MenubarTest" id="s1" pass="1" fail="0" skip="0">MenubarTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-20T13:21:15.326187" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+</errors>
+</robot>

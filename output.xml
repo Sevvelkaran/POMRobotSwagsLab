@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-20T12:12:44.494131" rpa="false" schemaversion="5">
+<suite id="s1" name="POMRobot" source="/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot">
+<suite id="s1-s1" name="TestCases" source="/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/TestCases">
+<suite id="s1-s1-s1" name="LoginTest" source="/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/TestCases/LoginTest.robot">
+<test id="s1-s1-s1-t1" name="Validate the Loginpage" line="16">
+<kw name="Open the Browser with URl" type="SETUP">
+<msg time="2025-05-20T12:12:45.270499" level="FAIL">No keyword with name 'Open the Browser with URl' found.</msg>
+<status status="FAIL" start="2025-05-20T12:12:45.270381" elapsed="0.000214">No keyword with name 'Open the Browser with URl' found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T12:12:45.271441" elapsed="0.000247"/>
+</kw>
+<doc>Validate the Login page with different test cases</doc>
+<tag>Login</tag>
+<status status="FAIL" start="2025-05-20T12:12:45.262361" elapsed="0.009489">Setup failed:
+No keyword with name 'Open the Browser with URl' found.</status>
+</test>
+<doc>Login Test Case</doc>
+<status status="FAIL" start="2025-05-20T12:12:44.570641" elapsed="0.702554"/>
+</suite>
+<status status="FAIL" start="2025-05-20T12:12:44.568904" elapsed="0.718959"/>
+</suite>
+<status status="FAIL" start="2025-05-20T12:12:44.497942" elapsed="0.795092"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Login</stat>
+</tag>
+<suite>
+<stat name="POMRobot" id="s1" pass="0" fail="1" skip="0">POMRobot</stat>
+<stat name="TestCases" id="s1-s1" pass="0" fail="1" skip="0">POMRobot.TestCases</stat>
+<stat name="LoginTest" id="s1-s1-s1" pass="0" fail="1" skip="0">POMRobot.TestCases.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-20T12:12:44.118278" level="ERROR">Error in file '/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/Resources/LoginResource.robot' on line 19: Creating keyword 'Verify the error message is displayed for locked_out_user' failed: Invalid argument specification: Invalid argument syntax 'Epic sadface: Sorry, this user has been locked out.'.</msg>
+<msg time="2025-05-20T12:12:44.118926" level="ERROR">Error in file '/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/Resources/LoginResource.robot' on line 22: Creating keyword 'Verify the error message is displayed for blank username' failed: Invalid argument specification: Invalid argument syntax 'Epic sadface: Username is required'.</msg>
+<msg time="2025-05-20T12:12:44.119059" level="ERROR">Error in file '/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/Resources/LoginResource.robot' on line 25: Creating keyword 'Verify the error message is displayed for blank password' failed: Invalid argument specification: Invalid argument syntax 'Epic sadface: Password is required'.</msg>
+<msg time="2025-05-20T12:12:44.119189" level="ERROR">Error in file '/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/Resources/LoginResource.robot' on line 28: Creating keyword 'Verify the error message is displayed for ivalid credentials' failed: Invalid argument specification: Invalid argument syntax 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<msg time="2025-05-20T12:12:44.119371" level="ERROR">Error in file '/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/Resources/LoginResource.robot' on line 31: Creating keyword 'Verify the Homepage' failed: Invalid argument specification: Invalid argument syntax 'Products'.</msg>
+<msg time="2025-05-20T12:12:45.194182" level="ERROR">Error in file '/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/TestCases/LoginTest.robot' on line 4: Resource file '../GenericResource.robot' does not exist.</msg>
+<msg time="2025-05-20T12:12:45.194872" level="ERROR">Error in file '/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/TestCases/LoginTest.robot' on line 5: Resource file '../LoginResource.robot' does not exist.</msg>
+<msg time="2025-05-20T12:12:45.255228" level="ERROR">[ DataDriver ] Error in robot file:
+  File "/Users/sevvelkaranpalanivetrivel/Desktop/Expleo_Training /POMRobot/TestCases/LoginTest.robot", line 0</msg>
+<msg time="2025-05-20T12:12:45.255366" level="ERROR">In source file:
+  File "Resources/Logindata.csv", line 0</msg>
+<msg time="2025-05-20T12:12:45.262064" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: AttributeError: No "Test Template" keyword found for first test case.</msg>
+</errors>
+</robot>
