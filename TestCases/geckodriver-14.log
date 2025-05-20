@@ -1,0 +1,26 @@
+1747757918045	geckodriver	INFO	Listening on 127.0.0.1:50211
+1747757918074	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/my/_xczdv396cj4lp0rs8vdvc340000gn/T/rust_mozprofileW53vvM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1747757918598	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1747757919158	Marionette	INFO	Listening on port 50217
+Read port: 50217
+WebDriver BiDi listening on ws://127.0.0.1:50212
+2025-05-20 21:48:39.272 plugin-container[4388:71931] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-05-20 21:48:39.273 plugin-container[4388:71931] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-05-20 21:48:39.277 plugin-container[4388:71931] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-05-20 21:48:39.277 plugin-container[4388:71931] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-05-20 21:48:39.277 plugin-container[4388:71936] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-05-20 21:48:39.277 plugin-container[4388:71936] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1747757919439	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50212/devtools/browser/4d8f7959-ae36-43d3-bf75-e3661827518c
+2025-05-20 16:18:41.949 plugin-container[4395:72102] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-05-20 16:18:41.950 plugin-container[4395:72102] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-05-20 16:18:41.957 plugin-container[4395:72102] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-05-20 16:18:41.957 plugin-container[4395:72102] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-05-20 16:18:41.959 plugin-container[4395:72121] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-05-20 16:18:41.959 plugin-container[4395:72121] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.saucedemo.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.saucedemo.com."
+1747757925128	Marionette	INFO	Stopped listening on port 50217
